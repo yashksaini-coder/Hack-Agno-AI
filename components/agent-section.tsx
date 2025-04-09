@@ -45,14 +45,17 @@ const AgentSection: React.FC = () => {
           </div>
         ) : (
           <div className="terminal-text">
-            <p className="mb-2">Welcome to the AI Agent Interface.</p>
-            <p className="mb-2">This agent can help you with stock market analysis and recommendations.</p>
-            <p>Example queries:</p>
+            {/* <p className="mb-2">Welcome to the AI Agent Interface.</p> */}
+            {/* <p className="mb-2">This agent can help you with stock market analysis and recommendations.</p> */}
+            {/* <p>Example queries:</p>
             <ul className="list-disc pl-5 space-y-1">
               <li>Analyze AAPL performance</li>
               <li>Compare MSFT and GOOGL</li>
               <li>Recommend tech stocks to buy</li>
-            </ul>
+            </ul> */}
+            <div className="flex justify-center items-center p-4 border-2 border-dashed border-terminal-cyan rounded-lg">
+              <p className="text-terminal-cyan">🚧 Under Development -  Coming Soon 🚧</p>
+            </div>
           </div>
         )}
       </div>

@@ -40,12 +40,12 @@ export default function Home() {
         </div>
 
         {/* Bottom Row */}
-        <div className="md:col-span-3 terminal-section">
+        {/* <div className="md:col-span-3 terminal-section">
           <TopStocksSection />
         </div>
         <div className="md:col-span-9 terminal-section">
           <ChatSection />
-        </div>
+        </div> */}
       </div>
     </main>
   )
