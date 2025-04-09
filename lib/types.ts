@@ -14,5 +14,5 @@ export interface health {
     api: {
         groq_api: string
         gemini_api: string
-    }    
+    }
 }
