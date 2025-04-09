@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { StockData } from "@/lib/types";
-import { list } from "postcss";
 
 const StockSection: React.FC = () => {
   const stockList = ["MSFT", "AAPL", "GOOGL", "AMZN", "META", "TSLA", "NVDA"];
