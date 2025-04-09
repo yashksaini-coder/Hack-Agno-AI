@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --terminal-green: #1e83db;
+  --terminal-cyan: #0F8AAD;
+  --terminal-background: #000000;
+  --terminal-border: #17caa9;
+}
+
+@layer base {
+  body {
+    @apply bg-terminal-background text-terminal-green;
+    font-family: var(--font-mono);
+  }
+}
+
+@layer components {
+  .terminal-container {
+    @apply border border-terminal-border rounded-md p-4 overflow-hidden;
+  }
+
+  .terminal-header {
+    @apply text-terminal-cyan font-bold;
+  }
+
+  .terminal-input {
+    @apply bg-terminal-background border border-terminal-border text-terminal-green p-2 w-full focus:outline-none focus:ring-1 focus:ring-terminal-cyan;
+  }
+
+  .terminal-button {
+    @apply bg-terminal-background border border-terminal-border text-terminal-cyan px-4 py-2 hover:bg-black/50 transition-colors;
+  }
+
+  .terminal-section {
+    @apply border border-terminal-border rounded-md p-4 overflow-auto;
+  }
+
+  .terminal-title {
+    @apply text-terminal-cyan font-bold text-xl mb-4;
+  }
+
+  .terminal-text {
+    @apply text-terminal-green;
+  }
+
+  .terminal-cursor {
+    @apply inline-block w-2 h-4 bg-terminal-green animate-pulse;
+  }
+
+  .terminal-prompt::before {
+    content: "$ ";
+    @apply text-terminal-cyan;
+  }
+}
+
+/* ASCII Art Shadow Text */
+.ascii-shadow {
+  font-size: 1.5rem;
+  line-height: 1;
+  white-space: pre;
+  font-family: monospace;
+  color: var(--terminal-cyan);
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
